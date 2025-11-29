@@ -6,7 +6,7 @@ typedef enum
     notValidMonth = 0,
     outOfBounds,
     notValidYear,
-    notValidDay
+    notValidDay,
     noError,
 }Error;
 
