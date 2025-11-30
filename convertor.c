@@ -146,7 +146,7 @@ static const Error isValidDateAd( const Date* adDate )
     if(daysInMonth(adDate->month, isLeapAd(adDate->year)) < adDate->day)
         return notValidDay;
 
-    if( adDate->day < 0 )
+    if( adDate->day <= 0 )
         return notValidDay;
 
 
@@ -186,7 +186,7 @@ static const Error isValidDateBs( const Date* bsDate )
     if(bsDaysInMonthsByYear[index][bsDate->month] < bsDate->day)
         return notValidDay;
 
-    if( bsDate->day < 0 )
+    if( bsDate->day <= 0 )
         return notValidDay;
 
 
@@ -222,7 +222,7 @@ static const Error validate(Date *date, bool isAd)
     { 
         case 1: 
             return isValidDateAd(date);
-        case 2:
+        case 0:
             return isValidDateAd(date);
         default:
             return noError;
