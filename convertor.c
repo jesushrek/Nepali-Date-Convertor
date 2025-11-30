@@ -223,7 +223,7 @@ static const Error validate(Date *date, bool isAd)
         case 1: 
             return isValidDateAd(date);
         case 0:
-            return isValidDateAd(date);
+            return isValidDateBs(date);
         default:
             return noError;
     }
